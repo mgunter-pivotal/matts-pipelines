@@ -9,7 +9,7 @@ k8s_master_ip=$(pks cluster "$PKS_CLUSTER_NAME" --json | jq -r ".kubernetes_mast
 
 pks get-credentials "$PKS_CLUSTER_NAME"
 
-sed -i "s/server: .*$/server: https:\/\/"$k8s_master_ip":8443/" ~/.kube/config
+#sed -i "s/server: .*$/server: https:\/\/"$k8s_master_ip":8443/" ~/.kube/config
 
 kubectl cluster-info
 
