@@ -25,4 +25,4 @@ subjects:
     namespace: kube-system
 EOF
 
-kubectl create -f rbac-config.yaml
+kubectl create -f rbac-config.yaml --insecure-skip-tls-verify=true
