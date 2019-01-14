@@ -12,4 +12,4 @@ inputs:
   - name: kube-config
 
 run:
-  path: peters-pipelines/kubernetes/tasks/deploy-helm/task.sh
+  path: peters-pipelines/kubernetes/tasks/deploy-chart/task.sh
