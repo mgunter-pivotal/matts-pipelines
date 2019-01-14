@@ -6,4 +6,4 @@ cp kube-config/config ~/.kube/config
 
 helm init --client-only
 helm repo update
-helm install stable/concourse
+helm install $HELM_CHART --namespace $HELM_NAMESPACE --release $HELM_RELEASE

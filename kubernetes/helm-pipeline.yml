@@ -5,7 +5,7 @@ resources:
     uri: https://github.com/mgunter-pivotal/peters-pipelines.git 
     private_key: {{github_private_key}}
 jobs:
-- name: initialize-helm
+- name: chart-install
   plan:
   - get: peters-pipelines
   - task: authenticate-kubernetes
@@ -17,3 +17,9 @@ jobs:
       PKS_CLUSTER_NAME: {{pks_cluster_name}}
   - task: setup-helm
     file: peters-pipelines/kubernetes/tasks/deploy-chart/task.yml
+    params: 
+      HELM_CHART: {{helm_chart}}
+      HELM_NAMESPACE: {{helm_namespace}}
+      HELM_REPLEASE: {{helm_release}}
+      HELM_VALUES: {{helm_values}}
+      HELM_REPO: {{helm_repo}}
