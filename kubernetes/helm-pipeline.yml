@@ -7,13 +7,13 @@ resources:
 - name: chart-repo
   type: git
   source:
-    uri: https://github.com/mgunter-pivotal/ccl-uchart.git
+    uri: git@github.com:mgunter-pivotal/ccl-uchart.git
     private_key: {{github_private_key}}
 jobs:
 - name: chart-install
   plan:
   - get: peters-pipelines
-  - get: uchart-repo
+  - get: chart-repo
   - task: authenticate-kubernetes
     file: peters-pipelines/kubernetes/tasks/authenticate-kubernetes/task.yml
     params:
