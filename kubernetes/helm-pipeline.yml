@@ -15,5 +15,5 @@ jobs:
       PKS_API_USERNAME: {{pks_api_username}}
       PKS_API_PASSWORD: {{pks_api_password}}
       PKS_CLUSTER_NAME: {{pks_cluster_name}}
-  - task: setup-tiller
-    file: peters-pipelines/kubernetes/tasks/setup-tiller/task.yml
+  - task: setup-helm
+    file: peters-pipelines/kubernetes/tasks/deploy-chart/task.yml
