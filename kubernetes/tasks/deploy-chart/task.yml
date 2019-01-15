@@ -10,6 +10,7 @@ image_resource:
 inputs:
   - name: peters-pipelines
   - name: chart-repo
+  - name: kube-config
 
 run:
   path: peters-pipelines/kubernetes/tasks/deploy-chart/task.sh
