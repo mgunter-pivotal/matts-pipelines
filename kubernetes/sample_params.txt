@@ -1,0 +1,8 @@
+
+github_private_key: [redacted key]
+
+
+pks_api_url: "api.pks.mgpcf.net"
+pks_api_username: "mgunter"
+pks_api_password: "mgunter"
+pks_cluster_name: "my-cluster"
